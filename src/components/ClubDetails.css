@@ -1,0 +1,281 @@
+/* General Styling */
+.club-details {
+  font-family: "Arial", sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+  background: linear-gradient(to bottom, #000, #111); /* Subtle gradient */
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+  overflow: hidden; /* Prevent overflow for 3D effects */
+}
+
+/* Page Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Sticky Navbar */
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(to right, #004080, #0059b3); /* Gradient navbar */
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
+}
+
+.sticky-navbar a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+
+.sticky-navbar a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #1e90ff; /* Blue underline animation */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.sticky-navbar a:hover::before {
+  transform: scaleX(1); /* Underline animation */
+}
+
+.sticky-navbar a:hover {
+  color: #1e90ff; /* Blue hover */
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+  animation: zoomIn 2s ease-in-out;
+  filter: brightness(0.8); /* Dimmed for overlay */
+  transition: filter 0.3s ease;
+}
+
+.hero-image:hover {
+  filter: brightness(1); /* Brighten on hover */
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(0, 0, 0, 0); /* Dark overlay */
+  padding: 20px 40px;
+  border-radius: 10px;
+  animation: slideDown 1.5s ease-in-out;
+}
+
+.hero-overlay h1 {
+  font-size: 48px;
+  color: #ffffff; /* Blue title */
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+  animation: pulse 2s infinite;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(30, 144, 255, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 25px rgba(30, 144, 255, 1);
+  }
+}
+
+/* Club Info Section */
+.club-info {
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+  border-radius: 10px;
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.club-info h1 {
+  font-size: 36px;
+  color: #ffffff; /* Blue title */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.club-info p {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.activities-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.activities-list li {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #004080, #0059b3);
+  color: #fff;
+  border-radius: 20px;
+  font-size: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activities-list li:hover {
+  transform: rotate(-5deg) scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Staff Section */
+.staff-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+  gap: 30px;
+  justify-items: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.staff-card {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+  text-align: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.staff-card:hover {
+  transform: rotateY(15deg) scale(1.1);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.5);
+}
+
+.staff-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.staff-image:hover {
+  transform: scale(1.1);
+}
+
+/* Events Section */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 30px;
+  justify-items: center;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.event-card {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.event-card:hover {
+  transform: rotateX(15deg) scale(1.1);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.5);
+}
+
+.event-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.event-card img:hover {
+  transform: scale(1.1);
+}
+
+.event-card p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background: linear-gradient(to right, #004080, #0059b3);
+  color: #fff;
+  border-radius: 10px;
+  margin-top: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
