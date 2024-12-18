@@ -1,0 +1,106 @@
+/* Container for the chatbot */
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Chat window styles */
+.chat-window {
+    width: 300px;
+    height: 400px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+/* When chat is open */
+.chat-window.open {
+    display: flex;
+    transform: scale(1);
+}
+
+/* When chat is closed */
+.chat-window.closed {
+    transform: scale(0);
+    display: none;
+}
+
+/* Chat header styles */
+.chat-header {
+    background: #0078d7;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Close button */
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Chat body styles */
+.chat-body {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+.messages p {
+    margin: 5px 0;
+}
+
+/* Input box */
+.chat-body input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Chat toggle button */
+.chat-toggle-btn {
+    width: 50px;
+    height: 50px;
+    background: #0078d7;
+    color: white;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: transform 0.3s ease;
+}
+
+/* Chat toggle hover effect */
+.chat-toggle-btn:hover {
+    transform: scale(1.1);
+}
