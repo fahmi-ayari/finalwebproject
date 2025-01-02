@@ -9,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Explore from "./explore";
 import Chatbot from "./chatbot";
+import About from "./about";
 
 
 
@@ -23,6 +24,7 @@ function App(){
         <Route path="/" element={<BigHome />} />
         <Route path="/clubs" element={<Clubs />} />
         <Route path="/club/:id" element={<ClubDetails />} />
+        <Route path="about" element={<About/>}/>
 
       </Routes>
       

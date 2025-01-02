@@ -37,7 +37,7 @@ function Footer(){
                 </form>
             </div>
         </div>
-        <div className='cr-con'>Copyright &copy; 2022 | Made by Ashoka Sec</div>
+        <div className='cr-con'>Copyright &copy; 2024 | Made by Fahmi AYARI & Adam Njeh</div>
     </footer>
   
 

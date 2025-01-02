@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./ClubDetails.css";
@@ -82,14 +82,18 @@ const ClubDetails = () => {
 
   return (
     <div className="club-details">
-      {/* Sticky Navbar */}
       <nav className="sticky-navbar">
         <a href="#info">About</a>
         <a href="#staff">Staff</a>
+        <Link to="/" className="home-button">
+          Home
+        </Link>
         <a href="#events">Events</a>
+        <Link to="/Clubs" className="clubs-button">
+          Clubs
+        </Link>
       </nav>
 
-      {/* Hero Section */}
       <header className="hero-section" data-aos="fade-in">
         <img src={club.image} alt={club.name} className="hero-image" />
         <div className="hero-overlay">
@@ -97,7 +101,6 @@ const ClubDetails = () => {
         </div>
       </header>
 
-      {/* Club Info Section */}
       <section id="info" className="club-info" data-aos="fade-up">
         <h1>About {club.name}</h1>
         <p>{club.description}</p>
@@ -108,7 +111,6 @@ const ClubDetails = () => {
         </ul>
       </section>
 
-      {/* Staff Members Section */}
       <section id="staff" className="club-section" data-aos="fade-up">
         <h2>Staff Members</h2>
         <div className="staff-list">
@@ -125,7 +127,6 @@ const ClubDetails = () => {
         </div>
       </section>
 
-      {/* Events Section */}
       <section id="events" className="club-section" data-aos="fade-up">
         <h2>Upcoming Events</h2>
         <div className="events-grid">
@@ -138,7 +139,6 @@ const ClubDetails = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="footer">
         <p>&copy; 2024 Sup'Com Clubs. All rights reserved.</p>
       </footer>

@@ -68,7 +68,7 @@ function Events(){
             <div className="carousel-item">
               <img
                 className="carousel-item__img"
-                src="./public/image1.png"
+                src="https://scontent.ftun15-1.fna.fbcdn.net/v/t39.30808-6/348263134_2538104236344244_5018510388752918900_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=cw1FfObCwDcQ7kNvgHuMgiL&_nc_zt=23&_nc_ht=scontent.ftun15-1.fna&_nc_gid=ASgsSHwXK_2OADAKC_5ek7o&oh=00_AYBBSEICzOQw-FavSCk3B4p2yyG1WQUqheqXfQUITyygRQ&oe=677B8088"
                 alt="people"
               />
               <div className="carousel-item__details">
